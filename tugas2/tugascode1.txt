@@ -1,0 +1,28 @@
+file = pd.read_csv("listings.csv")
+
+discreteData = file[["minimum_nights","number_of_reviews","reviews_per_month","calculated_host_listings_count","neighbourhood_group","neighbourhood","room_type"]]
+ContinuousData = file[["latitude","longitude","price","availability_365","last_review"]]
+print(discreteData)
+print(ContinuousData)
+
+import pandas as pd
+import numpy as np
+y = np.mean(discreteData)
+print(y)
+
+import pandas as pd
+import numpy as np
+x = np.mean(ContinuousData)
+print(x)
+
+import pandas as pd
+import numpy as np
+variance = np.var(ContinuousData)
+print(variance)
+
+
+import pandas as pd
+import numpy as np
+variance = np.var(discreteData)
+print(variance)
+
